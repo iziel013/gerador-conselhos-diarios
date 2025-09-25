@@ -7,4 +7,14 @@ const conselhos = [
     "jesus te ama"
 ];
 
-console.log("rquivo de srcipr carregado. array de conselhos pronto.");
+const conselhoTexto = document.getElementById('conselhoTexto');
+const novoConselhoBtn = document.getElementById('novoConselhoBtn');
+
+function gerarConselho() {
+    //bug intencional
+    const indice = Math.floor(math.random() * (conselhoTexto.length + 1));
+    conselhoTexto.textContent = conselhos[indice];
+
+}
+
+novoConselhoBtn.addEventListCenter('click', gerarConselho);
